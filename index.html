@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Lernunterstützung – einfache, spielerische Lernübungen für Kinder.">
+  <title>Lernunterstützung</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Lernunterstützung Startseite">
+    <span class="brand-star">★</span><span><b>Lernunterstützung</b><small>Gemeinsam Schritt für Schritt lernen</small></span>
+  </a>
+  <nav>
+    <button class="nav-btn active" data-view="home">⌂ <span>Startseite</span></button>
+    <button class="nav-btn" id="settingsBtn">⚙ <span>Einstellungen</span></button>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="view">
+    <div class="welcome">
+      <div><h1>Hallo!</h1><h2>Was möchtest du lernen?</h2></div>
+      <div class="bear" aria-hidden="true">🐻</div>
+      <div class="speech">Du kannst in deinem Tempo lernen.<br>Jede Aufgabe ist ein kleiner Schritt!</div>
+    </div>
+
+    <div class="home-grid">
+      <div class="categories">
+        <button class="category blue" data-cat="numbers"><span class="big">1 2 3</span><strong>Zahlen</strong><i>›</i></button>
+        <button class="category pink" data-cat="colors"><span class="big">🎨</span><strong>Farben</strong><i>›</i></button>
+        <button class="category green" data-cat="shapes"><span class="big">● ■ ▲</span><strong>Formen</strong><i>›</i></button>
+        <button class="category yellow" data-cat="halves"><span class="big">🧩</span><strong>Bilder &amp; Zuordnen</strong><i>›</i></button>
+        <button class="category purple" data-cat="animals"><span class="big">🐶 🐱 🐭</span><strong>Tiere</strong><i>›</i></button>
+        <button class="category cyan" data-cat="tracing"><span class="big">✏️ 〰</span><strong>Nachspuren</strong><i>›</i></button>
+      </div>
+      <aside class="progress-card">
+        <h2>Deine Fortschritte</h2>
+        <div class="progress-box">⭐ <span>Du hast schon viele<br>Aufgaben geschafft!</span></div>
+        <div class="progress-box"><b>Deine aktuelle Stufe</b><div id="stars">★☆☆☆☆</div></div>
+        <div class="progress-box"><b>Heute gelernt</b><p>🙂 <span id="todayText">Du bist großartig!</span> ❤️</p></div>
+        <button class="continue" id="continueBtn">▶ &nbsp; Weiter</button>
+      </aside>
+    </div>
+
+    <section class="how">
+      <h2>So funktioniert es</h2>
+      <div class="steps">
+        <div><span>👁️</span><b>1. Sehen</b><small>Du siehst eine Aufgabe.</small></div>
+        <div>→</div>
+        <div><span>🧠</span><b>2. Erkennen</b><small>Du findest die richtige Antwort.</small></div>
+        <div>→</div>
+        <div><span>☝️</span><b>3. Zuordnen</b><small>Du tippst oder klickst.</small></div>
+        <div>→</div>
+        <div><span>⭐</span><b>4. Geschafft!</b><small>Du bekommst eine freundliche Rückmeldung.</small></div>
+      </div>
+    </section>
+  </section>
+
+  <section id="activity" class="view hidden">
+    <div class="activity-head">
+      <button class="back" id="backBtn">← Zurück</button>
+      <div><span id="activityIcon">🔢</span><h1 id="activityTitle">Zahlen</h1></div>
+      <div class="level" id="levelLabel">Sehr leicht</div>
+    </div>
+    <div class="task-card">
+      <div class="task-counter" id="counter">Aufgabe 1</div>
+      <h2 id="instruction">Finde die richtige Antwort.</h2>
+      <div id="taskArea"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <button id="nextBtn" class="next hidden">Weiter →</button>
+    </div>
+  </section>
+
+  <section id="settings" class="view hidden">
+    <div class="settings-card">
+      <button class="back" id="settingsBack">← Zurück</button>
+      <h1>Einstellungen</h1>
+      <label class="switch-row"><span>🔊 Töne</span><input id="soundToggle" type="checkbox" checked></label>
+      <label class="switch-row"><span>✨ Animationen</span><input id="animToggle" type="checkbox" checked></label>
+      <p class="note">Die Übungen sind bewusst einfach. Es gibt keine Rangliste und keinen Zeitdruck.</p>
+      <button class="reset" id="resetBtn">Fortschritt zurücksetzen</button>
+    </div>
+  </section>
+</main>
+
+<footer>♡ &nbsp; Lernunterstützung &nbsp; — &nbsp; Gemeinsam Schritt für Schritt lernen &nbsp; — &nbsp; Für eine starke Zukunft</footer>
+<script src="app.js"></script>
+</body>
+</html>
